@@ -36,5 +36,3 @@ npm run lint
 
 
 ## 准备工作 
-
-+ npm install --save @vue/shared

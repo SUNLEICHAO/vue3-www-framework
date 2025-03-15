@@ -25,10 +25,10 @@ function handleCommand(command) {
         </nav>
       </div>
       <div class="header-ft">
-        <div class="bar-info-container" v-if="!userInfo?.id" @click="handleNavToLogin">
-          <span class="header-loginandregister">登录</span>
+        <div class="bar-info-container" v-if="!userInfo?.id">
+          <span class="header-login" @click="handleNavToLogin">登录</span>
           <el-divider direction="vertical"></el-divider>
-          <span class="header-loginandregister">注册</span>
+          <span class="header-register" @click="handleNavToLogin">注册</span>
         </div>
         <el-dropdown style="height: 100%" @command="handleCommand" v-if="userInfo?.id">
           <div class="bar-info-container">
@@ -40,12 +40,8 @@ function handleCommand(command) {
           <template #dropdown>
             <el-dropdown-menu>
               <el-dropdown-item icon="el-icon-user" command="GoMy">个人设置</el-dropdown-item>
-              <el-dropdown-item icon="el-icon-setting" command="GoSetting"
-                >账号安全</el-dropdown-item
-              >
-              <el-dropdown-item icon="el-icon-video-pause" command="Logout" divided
-                >退出</el-dropdown-item
-              >
+              <el-dropdown-item icon="el-icon-setting" command="GoSetting">账号安全</el-dropdown-item>
+              <el-dropdown-item icon="el-icon-video-pause" command="Logout" divided>退出</el-dropdown-item>
             </el-dropdown-menu>
           </template>
         </el-dropdown>
@@ -121,8 +117,8 @@ function handleCommand(command) {
       transition: all 0.2s ease;
       cursor: pointer;
 
-      &:hover {
-        background-color: #ecf5ff;
+      &>*:hover {
+        color: rgb(28, 208, 43);
       }
 
       .userInfo-name {

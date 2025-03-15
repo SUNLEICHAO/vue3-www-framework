@@ -1,14 +1,14 @@
 <script setup>
 import { RouterView } from 'vue-router';
-import BasicLayoutHeader from './BasicLayoutHeader.vue';
-import BasicLayoutFooter from './BasicLayoutFooter.vue';
+import LayoutHeader from './LayoutHeader.vue';
+import LayoutFooter from './LayoutFooter.vue';
 </script>
 
 <template>
   <div class="page-basic-layout">
-    <BasicLayoutHeader class="page-basic-header" />
+    <LayoutHeader class="page-basic-header" />
     <RouterView class="page-basic-body" />
-    <BasicLayoutFooter class="page-basic-footer" />
+    <LayoutFooter class="page-basic-footer" />
   </div>
 </template>
 
