@@ -7,10 +7,13 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@types/js-cookie": "^3.0.6",
+    "@types/nprogress": "^0.2.3",
     "axios": "^1.6.7",
     "element-plus": "^2.5.5",
     "js-cookie": "^3.0.5",
@@ -20,14 +23,19 @@
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
+    "@eslint/js": "^9.22.0",
     "@rushstack/eslint-patch": "^1.3.3",
     "@vitejs/plugin-vue": "^5.0.3",
     "@vue/eslint-config-prettier": "^8.0.0",
-    "eslint": "^8.49.0",
-    "eslint-plugin-vue": "^9.17.0",
+    "@vue/tsconfig": "^0.7.0",
+    "eslint": "^9.22.0",
+    "eslint-plugin-vue": "^9.33.0",
     "fast-glob": "^3.3.2",
+    "globals": "^16.0.0",
     "less": "^4.2.0",
-    "prettier": "^3.0.3",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.1",
     "vite": "^5.0.11",
     "vite-plugin-svg-icons": "^2.0.1"
   }

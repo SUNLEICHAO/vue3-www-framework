@@ -1,14 +1,15 @@
-<script setup>
-import { computed } from 'vue';
-import { useStore } from '@/stores/index.js';
+<script lang="ts" setup>
+import { computed } from "vue";
+import { useStore } from "@/stores/index";
+
 const store = useStore();
 const userInfo = computed(() => store.userInfo);
 
 function handleNavToLogin() {
-  console.log('handleNavToLoagin');
+  console.log("handleNavToLoagin");
 }
 
-function handleCommand(command) {
+function handleCommand(command: string) {
   console.log(command);
 }
 </script>
@@ -92,7 +93,7 @@ function handleCommand(command) {
 
           &:after {
             position: absolute;
-            content: '';
+            content: "";
             width: 110%;
             height: 4px;
             background: #35b558;
@@ -117,7 +118,7 @@ function handleCommand(command) {
       transition: all 0.2s ease;
       cursor: pointer;
 
-      &>*:hover {
+      & > *:hover {
         color: rgb(28, 208, 43);
       }
 
